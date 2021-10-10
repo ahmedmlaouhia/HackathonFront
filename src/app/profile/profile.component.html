@@ -1,1 +1,46 @@
-<p>profile works!</p>
+<div class="whole">
+  <div class="nav">
+    <h1 id="logo">MyLogo</h1>
+    <app-search></app-search>
+    <button mat-button class="chat" routerLink="/chat">Chat</button>
+    <button mat-raised-button class="logOut">Log out</button>
+  </div>
+  <div class="content">
+    <mat-card class="mat-card profile">
+      <mat-card-content class="mat-card-content">
+        <img
+          class="image info"
+          src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"
+          height="190px"
+          width="190px"
+        />
+        <h1 class="info">{{ me.fullname }}</h1>
+        <h1 class="info">hellowers@email.com</h1>
+        <h1 class="info">Male</h1>
+        <h1 class="info">{{ me.title }}</h1>
+        <h1 class="info">{{ me.bio }}</h1>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="mat-card friends">
+      <mat-card-header class="mat-card-header">
+        <mat-card-title>
+          <h1>My Friends</h1>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="mat-card-content friendsList">
+        <h1 class="friend">
+          <div>
+            <img
+              class="fimage"
+              src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"
+            />
+
+            <div class="name">name</div>
+          </div>
+          <button mat-raised-button class="unfriend">unfriend</button>
+        </h1>
+        <br />
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

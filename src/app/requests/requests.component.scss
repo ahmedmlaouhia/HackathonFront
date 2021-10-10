@@ -1,0 +1,33 @@
+.notifs {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    text-align: center;
+  }
+}
+
+.notifs-container {
+  h1 {
+    font-weight: bolder;
+    text-align: center;
+  }
+  margin: 20px;
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+  }
+}
+
+.accept {
+  color: green;
+}
+
+.decline {
+  color: red;
+}
+
+.cancel {
+  color: gray;
+}

@@ -1,1 +1,103 @@
-<p>settings works!</p>
+<div class="whole">
+  <div class="nav">
+    <h1 id="logo">MyLogo</h1>
+    <app-search></app-search>
+    <button mat-button routerLink="/chat" class="chat">Chat(2)</button>
+    <button mat-raised-button routerLink="/login" class="logOut">
+      Log out
+    </button>
+  </div>
+  <div class="content">
+    <mat-card class="mat-card">
+      <mat-card-header class="mat-card-header">
+        <mat-card-title>
+          <h1>Settings</h1>
+          <br />
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="mat-card-content">
+        <form class="form" (ngSubmit)="save()" #form="ngForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Full Name</mat-label>
+            <input
+              matInput
+              [(ngModel)]="user.fullname"
+              required
+              name="fullname"
+              pattern="[a-zA-Z_][a-zA-Z0-9_ ]+"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input
+              matInput
+              [(ngModel)]="user.fullname"
+              required
+              name="fullname"
+              pattern="[a-zA-Z_][a-zA-Z0-9_ ]+"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Bio</mat-label>
+            <input
+              matInput
+              [(ngModel)]="user.fullname"
+              required
+              name="fullname"
+              pattern="[a-zA-Z_][a-zA-Z0-9_ ]+"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Old password</mat-label>
+            <input
+              matInput
+              [(ngModel)]="oldpassword"
+              required
+              name="oldpassword"
+              type="oldpassword"
+              pattern=".{8,40}$"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>New password</mat-label>
+            <input
+              matInput
+              [(ngModel)]="user.password"
+              required
+              name="newpassword"
+              type="newpassword"
+              pattern=".{8,40}$"
+              ngModel
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Confirm new password</mat-label>
+            <input
+              matInput
+              [(ngModel)]="vpass"
+              type="password"
+              required
+              name="verificationpassword"
+              pattern=".{8,40}$"
+              ngModel
+            />
+          </mat-form-field>
+          <button
+            type="submit"
+            mat-raised-button
+            color="secondary"
+            [disabled]="form.invalid || this.user.password !== this.vpass"
+            class="signupbutton"
+          >
+            Save changes
+          </button>
+          <button mat-raised-button class="cancelbutton">Cancel</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

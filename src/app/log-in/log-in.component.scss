@@ -1,0 +1,60 @@
+.mat-card {
+  width: 65%;
+  margin: 30px auto;
+  top: 0;
+  opacity: 1;
+  padding: 30px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 330px;
+}
+
+#logo {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.mat-card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+h3 {
+  margin: auto;
+  width: fit-content;
+  bottom: 30px;
+}
+
+mat-label {
+  color: gray;
+}
+
+.signupbutton {
+  justify-self: center;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: small;
+}
+
+.form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+}

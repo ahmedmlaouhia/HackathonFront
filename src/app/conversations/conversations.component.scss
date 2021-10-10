@@ -1,0 +1,41 @@
+.profile {
+  height: 60px;
+  width: 100%;
+  background: #4b0082;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.beside {
+  margin-left: 12px;
+}
+
+.image {
+  margin: 8px;
+  margin-left: 20px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.profile .name {
+  margin-left: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.name {
+  color: rgb(0, 0, 0);
+  font-size: large;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background: #f0f0f0;
+  cursor: pointer;
+}

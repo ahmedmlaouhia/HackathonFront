@@ -1,0 +1,87 @@
+.nav {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  height: 60px;
+}
+
+app-search {
+  width: 40%;
+}
+
+#logo {
+  font-size: 35px;
+  margin: 0px;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: #4b0082;
+}
+
+.logOut {
+  background: #fe2198;
+  color: white;
+  margin-right: 20px;
+}
+
+.mat-card-header {
+  color: #4b0082;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card {
+  width: 65%;
+  margin: 30px auto;
+  top: 0;
+  opacity: 1;
+  padding: 30px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 400px;
+}
+
+.content {
+  height: 90%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.profile {
+  height: 80%;
+}
+
+.profile .mat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  margin: 15px;
+  font-size: larger;
+  margin: 10px auto;
+}
+
+.whole {
+  height: 100%;
+}
+
+.add {
+  background: #4b0082;
+  color: white;
+  width: 50%;
+}

@@ -1,1 +1,88 @@
-<p>sign-up works!</p>
+<div>
+  <h1 id="logo">MyLogo</h1>
+  <mat-card class="mat-card">
+    <mat-card-header class="mat-card-header">
+      <mat-card-title>
+        <h1>Sign up</h1>
+        <br />
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mat-card-content">
+      <form class="form" (ngSubmit)="signup()" #form="ngForm">
+        <mat-form-field appearance="fill">
+          <mat-label>Full Name</mat-label>
+          <input
+            matInput
+            [(ngModel)]="user.fullname"
+            required
+            name="fullname"
+            pattern="[a-zA-Z_][a-zA-Z0-9_ ]+"
+            ngModel
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Sex</mat-label>
+          <mat-select [(ngModel)]="user.sexe" required name="sexe" ngModel>
+            <mat-option value="N">Not selected</mat-option>
+            <mat-option value="M">Male</mat-option>
+            <mat-option value="F">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input
+            matInput
+            required
+            [(ngModel)]="user.email"
+            type="email"
+            name="email"
+            pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.+[a-z]{2,4}$"
+            ngModel
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [(ngModel)]="user.password"
+            required
+            name="password"
+            type="password"
+            pattern=".{8,40}$"
+            ngModel
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Confirm Password</mat-label>
+          <input
+            matInput
+            [(ngModel)]="vpass"
+            type="password"
+            required
+            name="verificationpassword"
+            pattern=".{8,40}$"
+            ngModel
+          />
+        </mat-form-field>
+
+        <button
+          type="submit"
+          mat-raised-button
+          color="secondary"
+          [disabled]="form.invalid || this.user.password !== this.vpass"
+          class="signupbutton"
+        >
+          Signup
+        </button>
+        <div style="text-align: center; margin-top: 15px">
+          Already have an account?
+          <a mat-button routerLink="/login"> Login</a>
+        </div>
+        <br />
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <h3>Powered by THE CONQUERORS</h3>
+</div>

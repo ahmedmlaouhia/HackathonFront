@@ -1,0 +1,15 @@
+.notifs {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    text-align: center;
+  }
+}
+
+.notifs-container {
+  h1 {
+    font-weight: bolder;
+    text-align: center;
+  }
+  margin: 20px;
+}

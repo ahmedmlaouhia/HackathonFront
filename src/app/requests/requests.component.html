@@ -1,0 +1,28 @@
+<mat-card class="notifs-container">
+  <h1>Friend Requests</h1>
+
+  <div class="notifs">
+    <div
+      style="display: flex; align-items: center"
+      *ngFor="let friendRq of requests.friendRequests"
+    >
+      <h3 style="margin-right: auto">{{ friendRq.fullname }}</h3>
+      <button class="accept" (click)="accept(friendRq._id)">Accept</button>
+      <button class="decline" (click)="decline(friendRq._id)">Decline</button>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="notifs-container">
+  <h1>Sent Requests</h1>
+
+  <div class="notifs">
+    <div
+      style="display: flex; align-items: center"
+      *ngFor="let sentRq of requests.sentRequests"
+    >
+      <h3 style="margin-right: auto">{{ sentRq.fullname }}</h3>
+      <button class="cancel" (click)="cancel(sentRq._id)">Cancel</button>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,26 @@
+<div class="profile" routerLink="/profile">
+  <img
+    class="image"
+    src="https://avatars.githubusercontent.com/u/69204725?v=4"
+  />
+  <div class="name">My name</div>
+</div>
+
+<div *ngFor="let conv of conversations">
+  <div class="message" (click)="switchConversation(conv._id)">
+    <img
+      class="image"
+      src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"
+    />
+    <div class="beside">
+      <div class="name">{{ conv.contact.fullname }}</div>
+      <div class="lastMessage" *ngIf="conv.lastMessage">
+        {{ conv.lastMessage.content }}
+        <i>({{ conv.lastMessage.createdAt | date: "hh:mm" }})</i>
+      </div>
+      <div class="lastMessage" *ngIf="!conv.lastMessage">
+        <b>Start The Chat</b>
+      </div>
+    </div>
+  </div>
+</div>
