@@ -6,16 +6,20 @@
     <div class="nav">
       <h1 id="logo">MyLogo</h1>
       <app-search></app-search>
-      <button mat-raised-button class="logOut">Log out</button>
+      <button mat-raised-button class="logOut" (click)="logout()">
+        Log out
+      </button>
     </div>
     <div class="conv_and_others">
       <div class="conversation">
         <app-conversation></app-conversation>
       </div>
       <div class="rightSide">
+        <!--
         <div class="notifications">
           <app-notifications></app-notifications>
         </div>
+        -->
         <div class="requests">
           <app-requests></app-requests>
         </div>

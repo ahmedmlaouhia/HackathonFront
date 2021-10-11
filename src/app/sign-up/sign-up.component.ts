@@ -17,7 +17,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
   user: any = {
     fullname: '',
     email: '',
-    sexe: 'M',
+    sexe: 'N',
     password: '',
   };
 

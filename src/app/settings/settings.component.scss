@@ -20,6 +20,11 @@ app-search {
   color: #4b0082;
 }
 
+.mat-form-field {
+  width: 400px;
+  margin: 10px;
+}
+
 .logOut {
   background: #fe2198;
   color: white;
@@ -37,6 +42,11 @@ app-search {
   justify-content: center;
 }
 
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%),
+    0px 1px 3px 0px rgb(0 0 0 / 0%);
+}
+
 .mat-card {
   width: 65%;
   margin: 30px auto;
@@ -45,13 +55,16 @@ app-search {
   padding: 30px 50px 40px 50px;
   width: 100%;
   background: #fff;
-  border-radius: 10px;
   transform: scale(1);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
-  z-index: 5;
   max-width: 700px;
   height: 80%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
@@ -62,27 +75,16 @@ app-search {
   align-items: center;
   justify-content: space-evenly;
 }
-.profile {
-  height: 80%;
-}
 
 .profile .mat-card-content {
   display: flex;
   flex-direction: column;
 }
 
-.info {
-  margin: 15px;
-  font-size: larger;
-  margin: 10px auto;
-}
-
 .whole {
   height: 100%;
 }
 
-.add {
-  background: #4b0082;
-  color: white;
-  width: 50%;
+.form button {
+  margin: 10px;
 }

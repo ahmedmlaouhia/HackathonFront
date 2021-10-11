@@ -30,6 +30,11 @@
   background: #ecd1ff;
 }
 
+.date {
+  display: flex;
+  justify-content: center;
+}
+
 .messages {
   display: flex;
   flex-direction: column;

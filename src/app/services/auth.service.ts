@@ -37,10 +37,11 @@ export class AuthService {
   loginSuccessful(token: any) {
     localStorage.setItem('token', token);
     this.isLoggedIn.next(true);
-    this.socket.emit('LOGIN', { token });
-    /*.then(() => {
+    this.socket.emit('LOGIN', { token }, () => {
+      console.log('done');
       this.router.navigate(['/chat']);
-    });*/
+    });
+    this.router.navigate(['/chat']);
   }
 
   logout() {

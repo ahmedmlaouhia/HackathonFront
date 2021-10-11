@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-settings',
@@ -11,14 +12,19 @@ export class SettingsComponent implements OnInit {
   loading = false;
   user: any = {
     fullname: '',
-    email: '',
-    sexe: 'M',
-    password: '',
+    bio: '',
+    title: '',
   };
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {}
 
-  save() {}
+  save() {
+    console.log(Object.keys(this.user).filter((key) => this.user[key] !== ''));
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }

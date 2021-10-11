@@ -44,14 +44,30 @@ export class ConversationComponent implements OnInit {
       this.file?.type.indexOf('image') !== -1 ? 'IMAGE' : 'FILE';
   }
   sendMessage() {
-    console.log('send', this.message, typeof this.file);
-    upload(this.file).then((url) => {
-      this.media.url = url;
+    if (this.file) {
+      console.log('send', this.message, typeof this.file);
+      upload(this.file).then((url) => {
+        this.media.url = url;
+        this.chatService
+          .createMessage({
+            content: this.message,
+            receiver: this.conversation.contact._id,
+            media: this.media,
+          })
+          .subscribe((message) => {
+            this.message = '';
+            //this.conversation.messages.push(message);
+            this.chatService.conversations.next((previous: any) => {
+              console.log(previous);
+              return {};
+            });
+          });
+      });
+    } else {
       this.chatService
         .createMessage({
           content: this.message,
           receiver: this.conversation.contact._id,
-          media: this.media,
         })
         .subscribe((message) => {
           this.message = '';
@@ -61,6 +77,6 @@ export class ConversationComponent implements OnInit {
             return {};
           });
         });
-    });
+    }
   }
 }

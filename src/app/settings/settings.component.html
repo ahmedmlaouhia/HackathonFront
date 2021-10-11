@@ -1,9 +1,14 @@
 <div class="whole">
   <div class="nav">
-    <h1 id="logo">MyLogo</h1>
+    <h1 id="logo">Hellowers</h1>
     <app-search></app-search>
-    <button mat-button routerLink="/chat" class="chat">Chat(2)</button>
-    <button mat-raised-button routerLink="/login" class="logOut">
+    <button mat-button routerLink="/chat" class="chat">Chat</button>
+    <button
+      mat-raised-button
+      routerLink="/login"
+      (click)="logout()"
+      class="logOut"
+    >
       Log out
     </button>
   </div>
@@ -22,7 +27,6 @@
             <input
               matInput
               [(ngModel)]="user.fullname"
-              required
               name="fullname"
               pattern="[a-zA-Z_][a-zA-Z0-9_ ]+"
               ngModel
@@ -32,9 +36,8 @@
             <mat-label>Title</mat-label>
             <input
               matInput
-              [(ngModel)]="user.fullname"
-              required
-              name="fullname"
+              [(ngModel)]="user.title"
+              name="title"
               pattern="[a-zA-Z_][a-zA-Z0-9_ ]+"
               ngModel
             />
@@ -43,9 +46,8 @@
             <mat-label>Bio</mat-label>
             <input
               matInput
-              [(ngModel)]="user.fullname"
-              required
-              name="fullname"
+              [(ngModel)]="user.bio"
+              name="bio"
               pattern="[a-zA-Z_][a-zA-Z0-9_ ]+"
               ngModel
             />
@@ -55,7 +57,6 @@
             <input
               matInput
               [(ngModel)]="oldpassword"
-              required
               name="oldpassword"
               type="oldpassword"
               pattern=".{8,40}$"
@@ -67,7 +68,6 @@
             <input
               matInput
               [(ngModel)]="user.password"
-              required
               name="newpassword"
               type="newpassword"
               pattern=".{8,40}$"
@@ -80,19 +80,12 @@
               matInput
               [(ngModel)]="vpass"
               type="password"
-              required
               name="verificationpassword"
               pattern=".{8,40}$"
               ngModel
             />
           </mat-form-field>
-          <button
-            type="submit"
-            mat-raised-button
-            color="secondary"
-            [disabled]="form.invalid || this.user.password !== this.vpass"
-            class="signupbutton"
-          >
+          <button type="submit" mat-raised-button class="savebutton">
             Save changes
           </button>
           <button mat-raised-button class="cancelbutton">Cancel</button>
